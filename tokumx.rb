@@ -8,7 +8,13 @@ class Tokumx < Formula
   sha256 '61fcffbd2afd1147bf51e2467527b32a1f9d976a1ff7a6773cadcfd57083d208'
 
   def install
-    prefix.install Dir['*']
+    bin.install Dir['bin/*']
+    prefix.install Dir['lib64']
+    prefix.install Dir['GNU-AGPL-3.0']
+    prefix.install Dir['THIRD-PARTY-NOTICES']
+    prefix.install Dir['NEWS']
+    prefix.install Dir['README']
+    prefix.install Dir['README-TOKUKV']
 
     (buildpath+"tokumx.conf").write tokumx_conf
     etc.install "tokumx.conf"
