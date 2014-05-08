@@ -8,7 +8,7 @@ class Tokumx < Formula
     sha256 '61fcffbd2afd1147bf51e2467527b32a1f9d976a1ff7a6773cadcfd57083d208'
   end
 
-  conflicts_with 'mongodb'
+  conflicts_with 'elasticsearch'
 
   def install
     bin.install Dir['bin/*']
