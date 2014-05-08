@@ -9,7 +9,7 @@ class Tokumx < Formula
   url 'https://github.com/igagnidz/tokumx-osx-build/raw/master/tokumx-1.4.1-osx-x86_64-mavericks%2B256MBscanandorder.tar.gz'
   sha256 '61fcffbd2afd1147bf51e2467527b32a1f9d976a1ff7a6773cadcfd57083d208'
 
-  conflicts_with 'elasticsearch'
+  conflicts_with 'mongodb'
 
   def install
     bin.install Dir['bin/*']
