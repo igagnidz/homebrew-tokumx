@@ -8,8 +8,8 @@ class Tokumx < Formula
   sha256 '61fcffbd2afd1147bf51e2467527b32a1f9d976a1ff7a6773cadcfd57083d208'
 
   def install
-    prefix.install Dir['**/**']
     bin.install Dir['bin/*']
+    prefix.install Dir['**/**']
 
     (buildpath+"tokumx.conf").write tokumx_conf
     etc.install "tokumx.conf"
