@@ -3,10 +3,11 @@ require 'formula'
 class Tokumx < Formula
   homepage 'http://www.tokutek.com/products/tokumx-for-mongodb/'
   version '1.4.1'
-  if MacOS.version == :lion
-    url 'https://github.com/igagnidz/tokumx-osx-build/raw/master/tokumx-1.4.1-osx-x86_64-mavericks%2B256MBscanandorder.tar.gz'
-    sha256 '61fcffbd2afd1147bf51e2467527b32a1f9d976a1ff7a6773cadcfd57083d208'
-  end
+
+  raise FormulaSpecificationError, 'Formula requires Mavericks (OSX 10.9)' if MacOS.version == :mavericks
+
+  url 'https://github.com/igagnidz/tokumx-osx-build/raw/master/tokumx-1.4.1-osx-x86_64-mavericks%2B256MBscanandorder.tar.gz'
+  sha256 '61fcffbd2afd1147bf51e2467527b32a1f9d976a1ff7a6773cadcfd57083d208'
 
   conflicts_with 'elasticsearch'
 
