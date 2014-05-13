@@ -2,12 +2,12 @@ require 'formula'
 
 class Tokumx < Formula
   homepage 'http://www.tokutek.com/products/tokumx-for-mongodb/'
-  version '1.4.1'
+  version '1.4.2'
 
   raise FormulaSpecificationError, 'Formula requires Mavericks (OSX 10.9)' unless MacOS.version == :mavericks
 
-  url 'https://github.com/igagnidz/tokumx-osx-build/raw/master/tokumx-1.4.1-osx-x86_64-mavericks%2B256MBscanandorder.tar.gz'
-  sha256 '61fcffbd2afd1147bf51e2467527b32a1f9d976a1ff7a6773cadcfd57083d208'
+  url 'https://github.com/igagnidz/tokumx-osx-build/raw/master/tokumx-1.4.2-osx-x86_64-mavericks%2B256MBscanandorder.tar.gz'
+  sha256 'a6a9b2c1d554cb8cddd5b85b3d9494b78021111e96f25c0dda37ccdf1eccd612'
 
   conflicts_with 'mongodb'
 
@@ -37,6 +37,12 @@ class Tokumx < Formula
 
     # Only accept local connections
     bind_ip = 127.0.0.1
+
+    # Only use ~2GB of ram for cache
+    cacheSize = 2G
+
+    # Read page size to use when creating new collections
+    defaultReadPageSize = 256K
   EOS
   end
 
