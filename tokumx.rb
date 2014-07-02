@@ -42,7 +42,7 @@ class Tokumx < Formula
     cacheSize = 2G
 
     # Read page size to use when creating new collections
-    defaultReadPageSize = 256K
+    #defaultReadPageSize = 256K
   EOS
   end
 
