@@ -4,7 +4,7 @@ class Tokumx < Formula
   homepage 'http://www.tokutek.com/products/tokumx-for-mongodb/'
   version '1.4.2'
 
-  raise FormulaSpecificationError, 'Formula requires Mavericks (OSX 10.9)' unless MacOS.version == :mavericks
+  raise FormulaSpecificationError, 'Formula requires Mavericks or Yosemite (OSX 10.9 or 10.10)' unless MacOS.version >= :mavericks
 
   url 'https://github.com/igagnidz/tokumx-osx-build/raw/master/tokumx-1.4.2-osx-x86_64-mavericks%2B256MBscanandorder.tar.gz'
   sha256 'a6a9b2c1d554cb8cddd5b85b3d9494b78021111e96f25c0dda37ccdf1eccd612'
