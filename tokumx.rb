@@ -79,7 +79,7 @@ class Tokumx < Formula
       <key>SoftResourceLimits</key>
       <dict>
         <key>NumberOfFiles</key>
-        <integer>4096</integer>
+        <integer>20000</integer>
       </dict>
     </dict>
     </plist>
