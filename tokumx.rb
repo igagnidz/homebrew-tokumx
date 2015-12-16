@@ -2,10 +2,10 @@ require 'formula'
 
 class Tokumx < Formula
   homepage 'http://www.tokutek.com/tokumx-for-mongodb'
-  version '2.0.1'
+  version '2.0.0'
   conflicts_with 'mongodb'
-  url 'https://s3.amazonaws.com/tokumx-2.0.1/tokumx-2.0.1-osx-x86_64-main.tar.gz'
-  sha1 '26f77ce6faa10c774d32a1a85aebc838c36b7e22'
+  url "https://s3.amazonaws.com/tokumx-2.0.0/tokumx-2.0.0-osx-x86_64-main.tar.gz"
+  sha1 "ad575f0868a778bca45eea404346e9823d6d5ef2"
 
   raise FormulaSpecificationError, 'Formula requires Mavericks or Yosemite (OSX 10.9 or 10.10)' unless MacOS.version >= :mavericks
 
